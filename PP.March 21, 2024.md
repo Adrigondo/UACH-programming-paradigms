@@ -1,6 +1,6 @@
 Si insistimos en que necesitamos la funcionalidad de una clase abstracta en Ruby, para eso están los módulos que no son otra cosa que un conjunto de métodos agrupados:
 
-```ruby
+```rb
 module module_name
     def method1(arg1)
         # This method does nothing
@@ -21,7 +21,7 @@ Nótese que
 2. Cada método puede o no tomar parámetros de entrada. Pero si le definimos parámetros aquella clase que lo incluya deberá respetar esoos par++ametros que le fueron originalmente definidos.
 
 Sin embargo es totalmente factible definir en un módulo un método con todo y sus instrucciones solo que ese método y esas instrucciones son incluidas como tales en la clase que lo incluya, y no deberá redefinir esas instrucciones porque si lo hace habrá redefinido todo el método. Ahora, cuando una clase debe incluir un módulo lo hará así:
-```ruby
+```rb
 class class_name
     include class_module
 
@@ -58,7 +58,7 @@ La razón es que Ruby considera que la herencia múltiple trae consigo más prob
 ![Multiple inheritance 3](images/image-5.png)
 
 Esto en Ruby lo podemos lograr como:
-```ruby
+```rb
 module class_A
     def method_1
         # instructions here

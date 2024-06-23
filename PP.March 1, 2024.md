@@ -90,7 +90,7 @@ Para comenzar:
 
 Es decir que ni siquiera nos dejan elegir que modo queremos para un atributo, es privado y punto.
 Más alla de esta *regla de oro*, en Ruby para indicar este modo de acceso usamos algo así como bloques, algo como en la siguiente definición:
-```ruby
+```rb
  class LaClase
     public
 
@@ -116,11 +116,11 @@ Existen 2 tipos de accesores:
 
 Un metodo escritor es un método hecho para "escribirle" un valor a un atributo privado y un metodo lector es uno que sirve para "leer" su valor actual.
 Supongamos que tenemos un atributo llamado `@atri`, claro, es un atributo de instancia. Para definirle un método accessor, tanto lector como escritor, vamos a usar la siguiente deficnición:
-```ruby
+```rb
 attr_accesor: atri
 ```
 Esto define tanto un método lector como uno escritor asociado al atributo atri. Y ¿cómo se invocan esos métodos? Simple:
-```ruby
+```rb
 objeto.atri = algo
 algo = objeto.atri
 ```

@@ -25,7 +25,7 @@ Entonces:
 
 - El método `move()` de un objeto tipo `Point1D`y el de un objeto tipo `Point2D` es uno polimórfico.
 
-```ruby
+```rb
 class Point1D
     def initialize(valX)
         @x=valX
@@ -70,7 +70,7 @@ La idea es que el primer objeto es muy general, y tiene un método con un nombre
 
 - Denuevo con `Point1D` y `Point2D` pero ligeramente modificado:
 
-```ruby
+```rb
 class Point1D
     def initialize(valX)
         @x=valX
@@ -93,7 +93,7 @@ end
 ```
 Hasta aquí el método `getCoords()` es polimórfico por redefinición de herencia. Luego nos inventamos una clase más como la siguiente:
 
-```ruby
+```rb
 class GeneralPoint
     def getCoords(point)
         return point.getCoords()
@@ -104,7 +104,7 @@ Esta clase nomás sirve para "leer" las coordenadas de un punto, sin importar su
 > En este ejemplo getCoords() es polimórfico por Duck typing.
 
 
-```ruby
+```rb
 def ppal
     p1=Point2D.new(10)
     p2=Point2D.new(20,20)

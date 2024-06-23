@@ -66,8 +66,8 @@ Tenemos una lista, y queremos aplicar una función a cada elemento de la lista. 
 - Apliquemos $f(x)=x+18$ a cada elemento de la lista $[10,20,30]$
   ```hs
   apply::(Integer->Integer)->[Integer]->[Integer]->[Integer]
-  apply fn list | list1==[] = list2
-                | otherwise= aplicable apply(tail list1)([fn(head list)]++list2)
+  apply fn list list2 list3 | list1==[] = list2
+                            | otherwise= aplicable apply(tail list1)([fn(head list)]++list2)
   ```
 
   Y en la función principal haríamos algo como:

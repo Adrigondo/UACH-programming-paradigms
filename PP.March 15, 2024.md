@@ -17,7 +17,7 @@ La razón de esto tiene que ver con 2 cosas:
 El *¨"monkey coding"*¨ (la "programación estilo chango") es una característica muy propia de Ruby que mermite modificar en tiempo de ejecución el comportamiento de una clase.
 
 Supongamos la siguiente clase:
-```ruby
+```rb
 class Punto1D
     def initialize(valX)
         @x=valX
@@ -29,7 +29,7 @@ class Punto1D
 end
 ```
 Y luego nuestra función principal
-```ruby
+```rb
 def ppal
     p1=Punto1D.new(10)
     p1.desplazar(10)
@@ -38,7 +38,7 @@ end
 ```
 
 Y luego en el punto de entrada del programa llamamos a la función principal, y luego le modificamos a Punto1D el método desplazar para sumarle deltaX+100 a @x y luego llamamos de nuevo a la función principal:
-```ruby
+```rb
 ppal()
 
 # Here we are doing monkey coding
@@ -58,7 +58,7 @@ Al ejecutar este programa veremos la siguiente salida:
 El monkey coding es tan solo una forma más de lo que en Ruby se llama *"reapertura de clases"*, que significa que podemos definir una clase, luego si nos da la gana la "volvemos a abrir" para redefinirla o seguir definiendola, y Ruby nos lo permite.
 
 Es decir partiendo de la clase base:
-```ruby
+```rb
 class Punto1D
     def initialize(valX)
         @x=valX
@@ -70,7 +70,7 @@ class Punto1D
 end
 ```
 Podemos utilizar la reapertura de clases para redefinirla en partes:
-```ruby
+```rb
 
 # Opening A
 class Punto1D
@@ -94,7 +94,7 @@ end
 ¿Acáso hemos definido tres veces a la clase Punto1D? ¿No hay un problema con esto? Pues Ruby dice que no:
 
 Ruby "une" las tres definiciones de Punto1D en una sola, que funcionará como teníamos la clase original:
-```ruby
+```rb
 class Punto1D
     # Opening A
     def initialize(valX)

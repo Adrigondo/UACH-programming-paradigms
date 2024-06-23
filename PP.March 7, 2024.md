@@ -2,13 +2,13 @@
 It is needed to know than the attributes accessors are not the only way to implement getters and setters mehtods in Ruby.
 
 Many Time, we can implement our own methods. For example, if we do an instance attribute @attr (that is private by default), we can implement it getter as:
-```ruby
+```rb
 def get_attr():
     return @attr
 end
 ```
 And the setter method can ibe:
-```ruby
+```rb
 def set_attr(value):
     @attr=value
 end
@@ -16,13 +16,13 @@ end
 
 # Español
 Debemos conocer que los accesores de atributos no son la única forma de implementar métodos lectores y escritores en Ruby. En muchas ocasiones podemos implementar nuestros propios métodos. Por ejemplo, si hacemos algún atributo de instancia @atri (que por default es privado) bien podriamos implementarle su lector como:
-```ruby
+```rb
 def lector_de_atri:
     return @atri
 end
 ```
 Y su método escritor como:
-```ruby
+```rb
 def escritor_de_atri:
     @atri=valor
 end
